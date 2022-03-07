@@ -13,6 +13,7 @@ public abstract class Baraja implements Repartible{
 		this.numCartas=40;
 		this.siguiente=0;
 		this.baraja=new Carta[numCartas];
+		barajar();
 		}
 
 	protected abstract String generaPalo();
@@ -34,8 +35,9 @@ public abstract class Baraja implements Repartible{
 					encontrado=true;
 				}
 			}
-			if (encontrado=false) {
-				baraja[numCartasGeneradas++]=c1;
+			if (encontrado==false) {
+				baraja[numCartasGeneradas]=c1;
+				numCartasGeneradas++;
 			}
 		}
 	}
