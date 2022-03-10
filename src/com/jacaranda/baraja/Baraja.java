@@ -8,9 +8,9 @@ public abstract class Baraja implements Repartible{
 	protected Carta[] baraja;
 	private int siguiente;
 	
-	public Baraja() {
+	public Baraja(int numCartas) {
 		super();
-		this.numCartas=40;
+		this.numCartas=numCartas;
 		this.siguiente=0;
 		this.baraja=new Carta[numCartas];
 		barajar();
